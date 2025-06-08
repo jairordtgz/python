@@ -38,7 +38,9 @@ print(f"Mi nombre es {name} {surname} y mi edad es {edad}")
 language = "python"
 a, b, c, d, e, f = language
 print(a)
-print(e)
+print(e) 
+print("Hola")
+
 
 #division
 
@@ -67,3 +69,7 @@ print(language.isnumeric())  # verifica si la cadena es numérica (retorna False
 print("1".isnumeric())  # verifica si "1" es numérico (retorna True)
 print(language.lower())  # convierte toda la cadena a minúsculas
 print(language.upper().isupper())  # verifica si la cadena está en mayúsculas (retorna True)
+print(language.lower().isupper())  # verifica si la cadena está en minúsculas (retorna False)
+print(language.startswith("py"))  # verifica si la cadena comienza con "py" (retorna True)
+print(language.startswith("Py")) # verifica si la cadena comienza con "Py" (retorna False)
+print("Py" == "py") # compara "Py" con "py" (retorna False)
