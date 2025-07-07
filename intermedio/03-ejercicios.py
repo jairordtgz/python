@@ -108,5 +108,47 @@ def factorialRecursivo(num):
 
 print(factorialRecursivo(3))
 
-numero = 253
+print("----- Ejercicio 6 -----")
 
+#  Escribe un programa que se encargue de comprobar si un número es o no primo.
+#  Hecho esto, imprime los números primos entre 1 y 100.
+
+def esPrimo(num):
+
+    divisores = []
+    for i in range(1,num+1):
+        if(num%i==0):
+            divisores.append(i)
+
+    #print(divisores)
+    if(len(divisores)<=2 and num!=1):
+        #print(f"El numero {num} es primo")
+        return True
+    else:
+        #print(f"El numero {num} no es primo")
+        return False
+
+print(esPrimo(5))
+
+for i in range(1,101):
+    if(esPrimo(i)):
+        print(i)
+
+
+print("----- Ejercicio 7 -----")
+
+#  Crea un programa que invierta el orden de una cadena de texto
+#  sin usar funciones propias del lenguaje que lo hagan de forma automática.
+#  Si le pasamos "Hola mundo" nos retornaría "odnum aloH"
+
+def invertir_cadena(cadena):
+    cadena_invertida = ""
+    for letra in cadena:
+        cadena_invertida = letra + cadena_invertida
+        #1 cadena_invertida = H + ""
+        #2 cadena_invertida = o + H
+        #3 cadena_invertida = l + oH
+        # ...
+    return cadena_invertida
+
+print(invertir_cadena("Hola mundo"))
